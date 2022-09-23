@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  livraria:
+    image: app/gui
+    container_name: gui
+    networks:
+      - sg-link
+    ports:
+      - 80:3000
+
+networks:
+  sg-link:
+    driver: bridge
